@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	buildv1 "github.com/openshift/api/build/v1"
+	buildv1 "github.com/uccps-samples/api/build/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -20,9 +20,9 @@ type FakeBuilds struct {
 	ns   string
 }
 
-var buildsResource = schema.GroupVersionResource{Group: "build.openshift.io", Version: "v1", Resource: "builds"}
+var buildsResource = schema.GroupVersionResource{Group: "build.uccp.io", Version: "v1", Resource: "builds"}
 
-var buildsKind = schema.GroupVersionKind{Group: "build.openshift.io", Version: "v1", Kind: "Build"}
+var buildsKind = schema.GroupVersionKind{Group: "build.uccp.io", Version: "v1", Kind: "Build"}
 
 // Get takes name of the build, and returns the corresponding build object, and an error if there is any.
 func (c *FakeBuilds) Get(ctx context.Context, name string, options v1.GetOptions) (result *buildv1.Build, err error) {

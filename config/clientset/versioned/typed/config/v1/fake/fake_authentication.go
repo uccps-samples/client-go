@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeAuthentications struct {
 	Fake *FakeConfigV1
 }
 
-var authenticationsResource = schema.GroupVersionResource{Group: "config.openshift.io", Version: "v1", Resource: "authentications"}
+var authenticationsResource = schema.GroupVersionResource{Group: "config.uccp.io", Version: "v1", Resource: "authentications"}
 
-var authenticationsKind = schema.GroupVersionKind{Group: "config.openshift.io", Version: "v1", Kind: "Authentication"}
+var authenticationsKind = schema.GroupVersionKind{Group: "config.uccp.io", Version: "v1", Kind: "Authentication"}
 
 // Get takes name of the authentication, and returns the corresponding authentication object, and an error if there is any.
 func (c *FakeAuthentications) Get(ctx context.Context, name string, options v1.GetOptions) (result *configv1.Authentication, err error) {

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	templatev1 "github.com/openshift/api/template/v1"
+	templatev1 "github.com/uccps-samples/api/template/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -20,9 +20,9 @@ type FakeTemplateInstances struct {
 	ns   string
 }
 
-var templateinstancesResource = schema.GroupVersionResource{Group: "template.openshift.io", Version: "v1", Resource: "templateinstances"}
+var templateinstancesResource = schema.GroupVersionResource{Group: "template.uccp.io", Version: "v1", Resource: "templateinstances"}
 
-var templateinstancesKind = schema.GroupVersionKind{Group: "template.openshift.io", Version: "v1", Kind: "TemplateInstance"}
+var templateinstancesKind = schema.GroupVersionKind{Group: "template.uccp.io", Version: "v1", Kind: "TemplateInstance"}
 
 // Get takes name of the templateInstance, and returns the corresponding templateInstance object, and an error if there is any.
 func (c *FakeTemplateInstances) Get(ctx context.Context, name string, options v1.GetOptions) (result *templatev1.TemplateInstance, err error) {

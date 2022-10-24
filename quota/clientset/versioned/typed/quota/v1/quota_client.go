@@ -5,8 +5,8 @@ package v1
 import (
 	"net/http"
 
-	v1 "github.com/openshift/api/quota/v1"
-	"github.com/openshift/client-go/quota/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/quota/v1"
+	"github.com/uccps-samples/client-go/quota/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -16,7 +16,7 @@ type QuotaV1Interface interface {
 	ClusterResourceQuotasGetter
 }
 
-// QuotaV1Client is used to interact with features provided by the quota.openshift.io group.
+// QuotaV1Client is used to interact with features provided by the quota.uccp.io group.
 type QuotaV1Client struct {
 	restClient rest.Interface
 }

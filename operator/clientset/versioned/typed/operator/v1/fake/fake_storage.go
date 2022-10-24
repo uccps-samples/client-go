@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeStorages struct {
 	Fake *FakeOperatorV1
 }
 
-var storagesResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "storages"}
+var storagesResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "storages"}
 
-var storagesKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "Storage"}
+var storagesKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "Storage"}
 
 // Get takes name of the storage, and returns the corresponding storage object, and an error if there is any.
 func (c *FakeStorages) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.Storage, err error) {

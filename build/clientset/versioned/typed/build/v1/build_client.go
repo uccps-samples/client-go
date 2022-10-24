@@ -5,8 +5,8 @@ package v1
 import (
 	"net/http"
 
-	v1 "github.com/openshift/api/build/v1"
-	"github.com/openshift/client-go/build/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/build/v1"
+	"github.com/uccps-samples/client-go/build/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -16,7 +16,7 @@ type BuildV1Interface interface {
 	BuildConfigsGetter
 }
 
-// BuildV1Client is used to interact with features provided by the build.openshift.io group.
+// BuildV1Client is used to interact with features provided by the build.uccp.io group.
 type BuildV1Client struct {
 	restClient rest.Interface
 }

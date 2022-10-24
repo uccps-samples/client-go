@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1 "github.com/openshift/api/authorization/v1"
+	v1 "github.com/uccps-samples/api/authorization/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -16,9 +16,9 @@ type FakeSubjectAccessReviews struct {
 	Fake *FakeAuthorizationV1
 }
 
-var subjectaccessreviewsResource = schema.GroupVersionResource{Group: "authorization.openshift.io", Version: "v1", Resource: "subjectaccessreviews"}
+var subjectaccessreviewsResource = schema.GroupVersionResource{Group: "authorization.uccp.io", Version: "v1", Resource: "subjectaccessreviews"}
 
-var subjectaccessreviewsKind = schema.GroupVersionKind{Group: "authorization.openshift.io", Version: "v1", Kind: "SubjectAccessReview"}
+var subjectaccessreviewsKind = schema.GroupVersionKind{Group: "authorization.uccp.io", Version: "v1", Kind: "SubjectAccessReview"}
 
 // Create takes the representation of a subjectAccessReview and creates it.  Returns the server's representation of the subjectAccessReviewResponse, and an error, if there is any.
 func (c *FakeSubjectAccessReviews) Create(ctx context.Context, subjectAccessReview *v1.SubjectAccessReview, opts metav1.CreateOptions) (result *v1.SubjectAccessReviewResponse, err error) {

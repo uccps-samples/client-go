@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	samplesv1 "github.com/openshift/client-go/samples/clientset/versioned/typed/samples/v1"
+	samplesv1 "github.com/uccps-samples/client-go/samples/clientset/versioned/typed/samples/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeEtcds struct {
 	Fake *FakeOperatorV1
 }
 
-var etcdsResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "etcds"}
+var etcdsResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "etcds"}
 
-var etcdsKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "Etcd"}
+var etcdsKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "Etcd"}
 
 // Get takes name of the etcd, and returns the corresponding etcd object, and an error if there is any.
 func (c *FakeEtcds) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.Etcd, err error) {

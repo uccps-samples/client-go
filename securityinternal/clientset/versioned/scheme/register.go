@@ -3,7 +3,7 @@
 package scheme
 
 import (
-	securityv1 "github.com/openshift/api/securityinternal/v1"
+	securityv1 "github.com/uccps-samples/api/securityinternal/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

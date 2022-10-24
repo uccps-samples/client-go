@@ -3,8 +3,8 @@
 package machine
 
 import (
-	internalinterfaces "github.com/openshift/client-go/machine/informers/externalversions/internalinterfaces"
-	v1beta1 "github.com/openshift/client-go/machine/informers/externalversions/machine/v1beta1"
+	internalinterfaces "github.com/uccps-samples/client-go/machine/informers/externalversions/internalinterfaces"
+	v1beta1 "github.com/uccps-samples/client-go/machine/informers/externalversions/machine/v1beta1"
 )
 
 // Interface provides access to each of this group's versions.

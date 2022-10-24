@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	networkv1 "github.com/openshift/api/network/v1"
+	networkv1 "github.com/uccps-samples/api/network/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeNetNamespaces struct {
 	Fake *FakeNetworkV1
 }
 
-var netnamespacesResource = schema.GroupVersionResource{Group: "network.openshift.io", Version: "v1", Resource: "netnamespaces"}
+var netnamespacesResource = schema.GroupVersionResource{Group: "network.uccp.io", Version: "v1", Resource: "netnamespaces"}
 
-var netnamespacesKind = schema.GroupVersionKind{Group: "network.openshift.io", Version: "v1", Kind: "NetNamespace"}
+var netnamespacesKind = schema.GroupVersionKind{Group: "network.uccp.io", Version: "v1", Kind: "NetNamespace"}
 
 // Get takes name of the netNamespace, and returns the corresponding netNamespace object, and an error if there is any.
 func (c *FakeNetNamespaces) Get(ctx context.Context, name string, options v1.GetOptions) (result *networkv1.NetNamespace, err error) {

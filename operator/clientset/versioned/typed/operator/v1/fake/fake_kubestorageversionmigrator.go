@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeKubeStorageVersionMigrators struct {
 	Fake *FakeOperatorV1
 }
 
-var kubestorageversionmigratorsResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "kubestorageversionmigrators"}
+var kubestorageversionmigratorsResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "kubestorageversionmigrators"}
 
-var kubestorageversionmigratorsKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "KubeStorageVersionMigrator"}
+var kubestorageversionmigratorsKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "KubeStorageVersionMigrator"}
 
 // Get takes name of the kubeStorageVersionMigrator, and returns the corresponding kubeStorageVersionMigrator object, and an error if there is any.
 func (c *FakeKubeStorageVersionMigrators) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.KubeStorageVersionMigrator, err error) {

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	apiserverv1 "github.com/openshift/api/apiserver/v1"
+	apiserverv1 "github.com/uccps-samples/api/apiserver/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeAPIRequestCounts struct {
 	Fake *FakeApiserverV1
 }
 
-var apirequestcountsResource = schema.GroupVersionResource{Group: "apiserver.openshift.io", Version: "v1", Resource: "apirequestcounts"}
+var apirequestcountsResource = schema.GroupVersionResource{Group: "apiserver.uccp.io", Version: "v1", Resource: "apirequestcounts"}
 
-var apirequestcountsKind = schema.GroupVersionKind{Group: "apiserver.openshift.io", Version: "v1", Kind: "APIRequestCount"}
+var apirequestcountsKind = schema.GroupVersionKind{Group: "apiserver.uccp.io", Version: "v1", Kind: "APIRequestCount"}
 
 // Get takes name of the aPIRequestCount, and returns the corresponding aPIRequestCount object, and an error if there is any.
 func (c *FakeAPIRequestCounts) Get(ctx context.Context, name string, options v1.GetOptions) (result *apiserverv1.APIRequestCount, err error) {

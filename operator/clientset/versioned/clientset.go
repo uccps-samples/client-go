@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	operatorv1 "github.com/openshift/client-go/operator/clientset/versioned/typed/operator/v1"
-	operatorv1alpha1 "github.com/openshift/client-go/operator/clientset/versioned/typed/operator/v1alpha1"
+	operatorv1 "github.com/uccps-samples/client-go/operator/clientset/versioned/typed/operator/v1"
+	operatorv1alpha1 "github.com/uccps-samples/client-go/operator/clientset/versioned/typed/operator/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

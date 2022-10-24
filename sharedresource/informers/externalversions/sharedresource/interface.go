@@ -3,8 +3,8 @@
 package sharedresource
 
 import (
-	internalinterfaces "github.com/openshift/client-go/sharedresource/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/openshift/client-go/sharedresource/informers/externalversions/sharedresource/v1alpha1"
+	internalinterfaces "github.com/uccps-samples/client-go/sharedresource/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/uccps-samples/client-go/sharedresource/informers/externalversions/sharedresource/v1alpha1"
 )
 
 // Interface provides access to each of this group's versions.

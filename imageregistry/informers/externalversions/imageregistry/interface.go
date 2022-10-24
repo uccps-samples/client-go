@@ -3,8 +3,8 @@
 package imageregistry
 
 import (
-	v1 "github.com/openshift/client-go/imageregistry/informers/externalversions/imageregistry/v1"
-	internalinterfaces "github.com/openshift/client-go/imageregistry/informers/externalversions/internalinterfaces"
+	v1 "github.com/uccps-samples/client-go/imageregistry/informers/externalversions/imageregistry/v1"
+	internalinterfaces "github.com/uccps-samples/client-go/imageregistry/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

@@ -3,8 +3,8 @@
 package quota
 
 import (
-	internalinterfaces "github.com/openshift/client-go/quota/informers/externalversions/internalinterfaces"
-	v1 "github.com/openshift/client-go/quota/informers/externalversions/quota/v1"
+	internalinterfaces "github.com/uccps-samples/client-go/quota/informers/externalversions/internalinterfaces"
+	v1 "github.com/uccps-samples/client-go/quota/informers/externalversions/quota/v1"
 )
 
 // Interface provides access to each of this group's versions.

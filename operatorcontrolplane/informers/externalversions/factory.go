@@ -7,9 +7,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/openshift/client-go/operatorcontrolplane/clientset/versioned"
-	internalinterfaces "github.com/openshift/client-go/operatorcontrolplane/informers/externalversions/internalinterfaces"
-	operatorcontrolplane "github.com/openshift/client-go/operatorcontrolplane/informers/externalversions/operatorcontrolplane"
+	versioned "github.com/uccps-samples/client-go/operatorcontrolplane/clientset/versioned"
+	internalinterfaces "github.com/uccps-samples/client-go/operatorcontrolplane/informers/externalversions/internalinterfaces"
+	operatorcontrolplane "github.com/uccps-samples/client-go/operatorcontrolplane/informers/externalversions/operatorcontrolplane"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

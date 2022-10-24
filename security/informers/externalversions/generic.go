@@ -5,7 +5,7 @@ package externalversions
 import (
 	"fmt"
 
-	v1 "github.com/openshift/api/security/v1"
+	v1 "github.com/uccps-samples/api/security/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )
@@ -36,7 +36,7 @@ func (f *genericInformer) Lister() cache.GenericLister {
 // TODO extend this to unknown resources with a client pool
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
-	// Group=security.openshift.io, Version=v1
+	// Group=security.uccp.io, Version=v1
 	case v1.SchemeGroupVersion.WithResource("rangeallocations"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Security().V1().RangeAllocations().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("securitycontextconstraints"):

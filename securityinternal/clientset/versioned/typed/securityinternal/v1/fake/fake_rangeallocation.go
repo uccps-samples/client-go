@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	securityinternalv1 "github.com/openshift/api/securityinternal/v1"
+	securityinternalv1 "github.com/uccps-samples/api/securityinternal/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeRangeAllocations struct {
 	Fake *FakeSecurityV1
 }
 
-var rangeallocationsResource = schema.GroupVersionResource{Group: "security.internal.openshift.io", Version: "v1", Resource: "rangeallocations"}
+var rangeallocationsResource = schema.GroupVersionResource{Group: "security.internal.uccp.io", Version: "v1", Resource: "rangeallocations"}
 
-var rangeallocationsKind = schema.GroupVersionKind{Group: "security.internal.openshift.io", Version: "v1", Kind: "RangeAllocation"}
+var rangeallocationsKind = schema.GroupVersionKind{Group: "security.internal.uccp.io", Version: "v1", Kind: "RangeAllocation"}
 
 // Get takes name of the rangeAllocation, and returns the corresponding rangeAllocation object, and an error if there is any.
 func (c *FakeRangeAllocations) Get(ctx context.Context, name string, options v1.GetOptions) (result *securityinternalv1.RangeAllocation, err error) {

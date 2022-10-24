@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1 "github.com/openshift/api/image/v1"
+	v1 "github.com/uccps-samples/api/image/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -16,9 +16,9 @@ type FakeImageSignatures struct {
 	Fake *FakeImageV1
 }
 
-var imagesignaturesResource = schema.GroupVersionResource{Group: "image.openshift.io", Version: "v1", Resource: "imagesignatures"}
+var imagesignaturesResource = schema.GroupVersionResource{Group: "image.uccp.io", Version: "v1", Resource: "imagesignatures"}
 
-var imagesignaturesKind = schema.GroupVersionKind{Group: "image.openshift.io", Version: "v1", Kind: "ImageSignature"}
+var imagesignaturesKind = schema.GroupVersionKind{Group: "image.uccp.io", Version: "v1", Kind: "ImageSignature"}
 
 // Create takes the representation of a imageSignature and creates it.  Returns the server's representation of the imageSignature, and an error, if there is any.
 func (c *FakeImageSignatures) Create(ctx context.Context, imageSignature *v1.ImageSignature, opts metav1.CreateOptions) (result *v1.ImageSignature, err error) {

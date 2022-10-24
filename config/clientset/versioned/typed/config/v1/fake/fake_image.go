@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeImages struct {
 	Fake *FakeConfigV1
 }
 
-var imagesResource = schema.GroupVersionResource{Group: "config.openshift.io", Version: "v1", Resource: "images"}
+var imagesResource = schema.GroupVersionResource{Group: "config.uccp.io", Version: "v1", Resource: "images"}
 
-var imagesKind = schema.GroupVersionKind{Group: "config.openshift.io", Version: "v1", Kind: "Image"}
+var imagesKind = schema.GroupVersionKind{Group: "config.uccp.io", Version: "v1", Kind: "Image"}
 
 // Get takes name of the image, and returns the corresponding image object, and an error if there is any.
 func (c *FakeImages) Get(ctx context.Context, name string, options v1.GetOptions) (result *configv1.Image, err error) {

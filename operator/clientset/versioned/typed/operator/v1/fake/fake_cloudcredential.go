@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeCloudCredentials struct {
 	Fake *FakeOperatorV1
 }
 
-var cloudcredentialsResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "cloudcredentials"}
+var cloudcredentialsResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "cloudcredentials"}
 
-var cloudcredentialsKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "CloudCredential"}
+var cloudcredentialsKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "CloudCredential"}
 
 // Get takes name of the cloudCredential, and returns the corresponding cloudCredential object, and an error if there is any.
 func (c *FakeCloudCredentials) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.CloudCredential, err error) {

@@ -5,8 +5,8 @@ package externalversions
 import (
 	"fmt"
 
-	v1 "github.com/openshift/api/operator/v1"
-	v1alpha1 "github.com/openshift/api/operator/v1alpha1"
+	v1 "github.com/uccps-samples/api/operator/v1"
+	v1alpha1 "github.com/uccps-samples/api/operator/v1alpha1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )
@@ -37,7 +37,7 @@ func (f *genericInformer) Lister() cache.GenericLister {
 // TODO extend this to unknown resources with a client pool
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
-	// Group=operator.openshift.io, Version=v1
+	// Group=operator.uccp.io, Version=v1
 	case v1.SchemeGroupVersion.WithResource("authentications"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1().Authentications().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("csisnapshotcontrollers"):
@@ -66,9 +66,9 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1().KubeStorageVersionMigrators().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("networks"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1().Networks().Informer()}, nil
-	case v1.SchemeGroupVersion.WithResource("openshiftapiservers"):
+	case v1.SchemeGroupVersion.WithResource("uccpapiservers"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1().OpenShiftAPIServers().Informer()}, nil
-	case v1.SchemeGroupVersion.WithResource("openshiftcontrollermanagers"):
+	case v1.SchemeGroupVersion.WithResource("uccpcontrollermanagers"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1().OpenShiftControllerManagers().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("servicecas"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1().ServiceCAs().Informer()}, nil
@@ -79,7 +79,7 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 	case v1.SchemeGroupVersion.WithResource("storages"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1().Storages().Informer()}, nil
 
-		// Group=operator.openshift.io, Version=v1alpha1
+		// Group=operator.uccp.io, Version=v1alpha1
 	case v1alpha1.SchemeGroupVersion.WithResource("imagecontentsourcepolicies"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Operator().V1alpha1().ImageContentSourcePolicies().Informer()}, nil
 

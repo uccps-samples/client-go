@@ -5,8 +5,8 @@ package v1
 import (
 	"net/http"
 
-	v1 "github.com/openshift/api/user/v1"
-	"github.com/openshift/client-go/user/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/user/v1"
+	"github.com/uccps-samples/client-go/user/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -18,7 +18,7 @@ type UserV1Interface interface {
 	UserIdentityMappingsGetter
 }
 
-// UserV1Client is used to interact with features provided by the user.openshift.io group.
+// UserV1Client is used to interact with features provided by the user.uccp.io group.
 type UserV1Client struct {
 	restClient rest.Interface
 }

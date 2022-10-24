@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	consolev1 "github.com/openshift/api/console/v1"
+	consolev1 "github.com/uccps-samples/api/console/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeConsoleExternalLogLinks struct {
 	Fake *FakeConsoleV1
 }
 
-var consoleexternalloglinksResource = schema.GroupVersionResource{Group: "console.openshift.io", Version: "v1", Resource: "consoleexternalloglinks"}
+var consoleexternalloglinksResource = schema.GroupVersionResource{Group: "console.uccp.io", Version: "v1", Resource: "consoleexternalloglinks"}
 
-var consoleexternalloglinksKind = schema.GroupVersionKind{Group: "console.openshift.io", Version: "v1", Kind: "ConsoleExternalLogLink"}
+var consoleexternalloglinksKind = schema.GroupVersionKind{Group: "console.uccp.io", Version: "v1", Kind: "ConsoleExternalLogLink"}
 
 // Get takes name of the consoleExternalLogLink, and returns the corresponding consoleExternalLogLink object, and an error if there is any.
 func (c *FakeConsoleExternalLogLinks) Get(ctx context.Context, name string, options v1.GetOptions) (result *consolev1.ConsoleExternalLogLink, err error) {

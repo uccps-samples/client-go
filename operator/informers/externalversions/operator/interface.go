@@ -3,9 +3,9 @@
 package operator
 
 import (
-	internalinterfaces "github.com/openshift/client-go/operator/informers/externalversions/internalinterfaces"
-	v1 "github.com/openshift/client-go/operator/informers/externalversions/operator/v1"
-	v1alpha1 "github.com/openshift/client-go/operator/informers/externalversions/operator/v1alpha1"
+	internalinterfaces "github.com/uccps-samples/client-go/operator/informers/externalversions/internalinterfaces"
+	v1 "github.com/uccps-samples/client-go/operator/informers/externalversions/operator/v1"
+	v1alpha1 "github.com/uccps-samples/client-go/operator/informers/externalversions/operator/v1alpha1"
 )
 
 // Interface provides access to each of this group's versions.

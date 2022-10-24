@@ -5,8 +5,8 @@ package v1
 import (
 	"net/http"
 
-	v1 "github.com/openshift/api/security/v1"
-	"github.com/openshift/client-go/security/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/security/v1"
+	"github.com/uccps-samples/client-go/security/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -19,7 +19,7 @@ type SecurityV1Interface interface {
 	SecurityContextConstraintsGetter
 }
 
-// SecurityV1Client is used to interact with features provided by the security.openshift.io group.
+// SecurityV1Client is used to interact with features provided by the security.uccp.io group.
 type SecurityV1Client struct {
 	restClient rest.Interface
 }

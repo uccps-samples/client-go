@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	quotav1 "github.com/openshift/api/quota/v1"
-	scheme "github.com/openshift/client-go/quota/clientset/versioned/scheme"
+	quotav1 "github.com/uccps-samples/api/quota/v1"
+	scheme "github.com/uccps-samples/client-go/quota/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	rest "k8s.io/client-go/rest"
 )

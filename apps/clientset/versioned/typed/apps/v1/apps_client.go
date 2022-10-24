@@ -5,8 +5,8 @@ package v1
 import (
 	"net/http"
 
-	v1 "github.com/openshift/api/apps/v1"
-	"github.com/openshift/client-go/apps/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/apps/v1"
+	"github.com/uccps-samples/client-go/apps/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -15,7 +15,7 @@ type AppsV1Interface interface {
 	DeploymentConfigsGetter
 }
 
-// AppsV1Client is used to interact with features provided by the apps.openshift.io group.
+// AppsV1Client is used to interact with features provided by the apps.uccp.io group.
 type AppsV1Client struct {
 	restClient rest.Interface
 }

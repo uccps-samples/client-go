@@ -5,8 +5,8 @@ package v1
 import (
 	"net/http"
 
-	v1 "github.com/openshift/api/console/v1"
-	"github.com/openshift/client-go/console/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/console/v1"
+	"github.com/uccps-samples/client-go/console/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -20,7 +20,7 @@ type ConsoleV1Interface interface {
 	ConsoleYAMLSamplesGetter
 }
 
-// ConsoleV1Client is used to interact with features provided by the console.openshift.io group.
+// ConsoleV1Client is used to interact with features provided by the console.uccp.io group.
 type ConsoleV1Client struct {
 	restClient rest.Interface
 }

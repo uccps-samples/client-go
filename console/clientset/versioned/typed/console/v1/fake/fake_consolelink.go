@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	consolev1 "github.com/openshift/api/console/v1"
+	consolev1 "github.com/uccps-samples/api/console/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeConsoleLinks struct {
 	Fake *FakeConsoleV1
 }
 
-var consolelinksResource = schema.GroupVersionResource{Group: "console.openshift.io", Version: "v1", Resource: "consolelinks"}
+var consolelinksResource = schema.GroupVersionResource{Group: "console.uccp.io", Version: "v1", Resource: "consolelinks"}
 
-var consolelinksKind = schema.GroupVersionKind{Group: "console.openshift.io", Version: "v1", Kind: "ConsoleLink"}
+var consolelinksKind = schema.GroupVersionKind{Group: "console.uccp.io", Version: "v1", Kind: "ConsoleLink"}
 
 // Get takes name of the consoleLink, and returns the corresponding consoleLink object, and an error if there is any.
 func (c *FakeConsoleLinks) Get(ctx context.Context, name string, options v1.GetOptions) (result *consolev1.ConsoleLink, err error) {

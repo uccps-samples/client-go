@@ -3,9 +3,9 @@
 package fake
 
 import (
-	clientset "github.com/openshift/client-go/operatorcontrolplane/clientset/versioned"
-	controlplanev1alpha1 "github.com/openshift/client-go/operatorcontrolplane/clientset/versioned/typed/operatorcontrolplane/v1alpha1"
-	fakecontrolplanev1alpha1 "github.com/openshift/client-go/operatorcontrolplane/clientset/versioned/typed/operatorcontrolplane/v1alpha1/fake"
+	clientset "github.com/uccps-samples/client-go/operatorcontrolplane/clientset/versioned"
+	controlplanev1alpha1 "github.com/uccps-samples/client-go/operatorcontrolplane/clientset/versioned/typed/operatorcontrolplane/v1alpha1"
+	fakecontrolplanev1alpha1 "github.com/uccps-samples/client-go/operatorcontrolplane/clientset/versioned/typed/operatorcontrolplane/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

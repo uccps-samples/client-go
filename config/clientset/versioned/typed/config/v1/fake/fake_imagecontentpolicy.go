@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeImageContentPolicies struct {
 	Fake *FakeConfigV1
 }
 
-var imagecontentpoliciesResource = schema.GroupVersionResource{Group: "config.openshift.io", Version: "v1", Resource: "imagecontentpolicies"}
+var imagecontentpoliciesResource = schema.GroupVersionResource{Group: "config.uccp.io", Version: "v1", Resource: "imagecontentpolicies"}
 
-var imagecontentpoliciesKind = schema.GroupVersionKind{Group: "config.openshift.io", Version: "v1", Kind: "ImageContentPolicy"}
+var imagecontentpoliciesKind = schema.GroupVersionKind{Group: "config.uccp.io", Version: "v1", Kind: "ImageContentPolicy"}
 
 // Get takes name of the imageContentPolicy, and returns the corresponding imageContentPolicy object, and an error if there is any.
 func (c *FakeImageContentPolicies) Get(ctx context.Context, name string, options v1.GetOptions) (result *configv1.ImageContentPolicy, err error) {

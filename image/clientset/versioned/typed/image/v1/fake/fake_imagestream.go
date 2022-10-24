@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	imagev1 "github.com/openshift/api/image/v1"
+	imagev1 "github.com/uccps-samples/api/image/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -20,9 +20,9 @@ type FakeImageStreams struct {
 	ns   string
 }
 
-var imagestreamsResource = schema.GroupVersionResource{Group: "image.openshift.io", Version: "v1", Resource: "imagestreams"}
+var imagestreamsResource = schema.GroupVersionResource{Group: "image.uccp.io", Version: "v1", Resource: "imagestreams"}
 
-var imagestreamsKind = schema.GroupVersionKind{Group: "image.openshift.io", Version: "v1", Kind: "ImageStream"}
+var imagestreamsKind = schema.GroupVersionKind{Group: "image.uccp.io", Version: "v1", Kind: "ImageStream"}
 
 // Get takes name of the imageStream, and returns the corresponding imageStream object, and an error if there is any.
 func (c *FakeImageStreams) Get(ctx context.Context, name string, options v1.GetOptions) (result *imagev1.ImageStream, err error) {

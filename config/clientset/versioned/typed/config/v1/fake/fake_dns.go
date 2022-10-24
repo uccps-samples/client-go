@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeDNSes struct {
 	Fake *FakeConfigV1
 }
 
-var dnsesResource = schema.GroupVersionResource{Group: "config.openshift.io", Version: "v1", Resource: "dnses"}
+var dnsesResource = schema.GroupVersionResource{Group: "config.uccp.io", Version: "v1", Resource: "dnses"}
 
-var dnsesKind = schema.GroupVersionKind{Group: "config.openshift.io", Version: "v1", Kind: "DNS"}
+var dnsesKind = schema.GroupVersionKind{Group: "config.uccp.io", Version: "v1", Kind: "DNS"}
 
 // Get takes name of the dNS, and returns the corresponding dNS object, and an error if there is any.
 func (c *FakeDNSes) Get(ctx context.Context, name string, options v1.GetOptions) (result *configv1.DNS, err error) {

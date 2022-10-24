@@ -5,8 +5,8 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "github.com/openshift/api/operatorcontrolplane/v1alpha1"
-	"github.com/openshift/client-go/operatorcontrolplane/clientset/versioned/scheme"
+	v1alpha1 "github.com/uccps-samples/api/operatorcontrolplane/v1alpha1"
+	"github.com/uccps-samples/client-go/operatorcontrolplane/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -15,7 +15,7 @@ type ControlplaneV1alpha1Interface interface {
 	PodNetworkConnectivityChecksGetter
 }
 
-// ControlplaneV1alpha1Client is used to interact with features provided by the controlplane.operator.openshift.io group.
+// ControlplaneV1alpha1Client is used to interact with features provided by the controlplane.operator.uccp.io group.
 type ControlplaneV1alpha1Client struct {
 	restClient rest.Interface
 }

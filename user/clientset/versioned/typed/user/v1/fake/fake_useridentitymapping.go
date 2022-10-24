@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	userv1 "github.com/openshift/api/user/v1"
+	userv1 "github.com/uccps-samples/api/user/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -16,9 +16,9 @@ type FakeUserIdentityMappings struct {
 	Fake *FakeUserV1
 }
 
-var useridentitymappingsResource = schema.GroupVersionResource{Group: "user.openshift.io", Version: "v1", Resource: "useridentitymappings"}
+var useridentitymappingsResource = schema.GroupVersionResource{Group: "user.uccp.io", Version: "v1", Resource: "useridentitymappings"}
 
-var useridentitymappingsKind = schema.GroupVersionKind{Group: "user.openshift.io", Version: "v1", Kind: "UserIdentityMapping"}
+var useridentitymappingsKind = schema.GroupVersionKind{Group: "user.uccp.io", Version: "v1", Kind: "UserIdentityMapping"}
 
 // Get takes name of the userIdentityMapping, and returns the corresponding userIdentityMapping object, and an error if there is any.
 func (c *FakeUserIdentityMappings) Get(ctx context.Context, name string, options v1.GetOptions) (result *userv1.UserIdentityMapping, err error) {

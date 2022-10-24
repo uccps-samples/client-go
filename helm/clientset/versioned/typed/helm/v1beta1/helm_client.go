@@ -5,8 +5,8 @@ package v1beta1
 import (
 	"net/http"
 
-	v1beta1 "github.com/openshift/api/helm/v1beta1"
-	"github.com/openshift/client-go/helm/clientset/versioned/scheme"
+	v1beta1 "github.com/uccps-samples/api/helm/v1beta1"
+	"github.com/uccps-samples/client-go/helm/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -15,7 +15,7 @@ type HelmV1beta1Interface interface {
 	HelmChartRepositoriesGetter
 }
 
-// HelmV1beta1Client is used to interact with features provided by the helm.openshift.io group.
+// HelmV1beta1Client is used to interact with features provided by the helm.uccp.io group.
 type HelmV1beta1Client struct {
 	restClient rest.Interface
 }

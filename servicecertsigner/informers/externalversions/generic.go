@@ -5,7 +5,7 @@ package externalversions
 import (
 	"fmt"
 
-	v1alpha1 "github.com/openshift/api/servicecertsigner/v1alpha1"
+	v1alpha1 "github.com/uccps-samples/api/servicecertsigner/v1alpha1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )
@@ -36,7 +36,7 @@ func (f *genericInformer) Lister() cache.GenericLister {
 // TODO extend this to unknown resources with a client pool
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
-	// Group=servicecertsigner.config.openshift.io, Version=v1alpha1
+	// Group=servicecertsigner.config.uccp.io, Version=v1alpha1
 	case v1alpha1.SchemeGroupVersion.WithResource("servicecertsigneroperatorconfigs"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Servicecertsigner().V1alpha1().ServiceCertSignerOperatorConfigs().Informer()}, nil
 

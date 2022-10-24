@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeServiceCatalogControllerManagers struct {
 	Fake *FakeOperatorV1
 }
 
-var servicecatalogcontrollermanagersResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "servicecatalogcontrollermanagers"}
+var servicecatalogcontrollermanagersResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "servicecatalogcontrollermanagers"}
 
-var servicecatalogcontrollermanagersKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "ServiceCatalogControllerManager"}
+var servicecatalogcontrollermanagersKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "ServiceCatalogControllerManager"}
 
 // Get takes name of the serviceCatalogControllerManager, and returns the corresponding serviceCatalogControllerManager object, and an error if there is any.
 func (c *FakeServiceCatalogControllerManagers) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.ServiceCatalogControllerManager, err error) {

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	authorizationv1 "github.com/openshift/api/authorization/v1"
+	authorizationv1 "github.com/uccps-samples/api/authorization/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -20,9 +20,9 @@ type FakeRoles struct {
 	ns   string
 }
 
-var rolesResource = schema.GroupVersionResource{Group: "authorization.openshift.io", Version: "v1", Resource: "roles"}
+var rolesResource = schema.GroupVersionResource{Group: "authorization.uccp.io", Version: "v1", Resource: "roles"}
 
-var rolesKind = schema.GroupVersionKind{Group: "authorization.openshift.io", Version: "v1", Kind: "Role"}
+var rolesKind = schema.GroupVersionKind{Group: "authorization.uccp.io", Version: "v1", Kind: "Role"}
 
 // Get takes name of the role, and returns the corresponding role object, and an error if there is any.
 func (c *FakeRoles) Get(ctx context.Context, name string, options v1.GetOptions) (result *authorizationv1.Role, err error) {

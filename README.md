@@ -20,7 +20,7 @@ See [INSTALL.md](/INSTALL.md) for detailed installation instructions.
 To pull in updates from openshift/api, run the following:
 
 ```
-$ go get github.com/openshift/api@<commit or branch>
+$ go get github.com/uccps-samples/api@<commit or branch>
 $ go mod tidy
 $ go mod vendor
 $ go mod verify

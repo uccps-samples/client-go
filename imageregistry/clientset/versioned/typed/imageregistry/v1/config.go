@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	v1 "github.com/openshift/api/imageregistry/v1"
-	scheme "github.com/openshift/client-go/imageregistry/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/imageregistry/v1"
+	scheme "github.com/uccps-samples/client-go/imageregistry/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

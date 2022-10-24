@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	networkv1 "github.com/openshift/api/network/v1"
+	networkv1 "github.com/uccps-samples/api/network/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -20,9 +20,9 @@ type FakeEgressNetworkPolicies struct {
 	ns   string
 }
 
-var egressnetworkpoliciesResource = schema.GroupVersionResource{Group: "network.openshift.io", Version: "v1", Resource: "egressnetworkpolicies"}
+var egressnetworkpoliciesResource = schema.GroupVersionResource{Group: "network.uccp.io", Version: "v1", Resource: "egressnetworkpolicies"}
 
-var egressnetworkpoliciesKind = schema.GroupVersionKind{Group: "network.openshift.io", Version: "v1", Kind: "EgressNetworkPolicy"}
+var egressnetworkpoliciesKind = schema.GroupVersionKind{Group: "network.uccp.io", Version: "v1", Kind: "EgressNetworkPolicy"}
 
 // Get takes name of the egressNetworkPolicy, and returns the corresponding egressNetworkPolicy object, and an error if there is any.
 func (c *FakeEgressNetworkPolicies) Get(ctx context.Context, name string, options v1.GetOptions) (result *networkv1.EgressNetworkPolicy, err error) {

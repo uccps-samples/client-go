@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	consolev1 "github.com/openshift/api/console/v1"
+	consolev1 "github.com/uccps-samples/api/console/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeConsoleNotifications struct {
 	Fake *FakeConsoleV1
 }
 
-var consolenotificationsResource = schema.GroupVersionResource{Group: "console.openshift.io", Version: "v1", Resource: "consolenotifications"}
+var consolenotificationsResource = schema.GroupVersionResource{Group: "console.uccp.io", Version: "v1", Resource: "consolenotifications"}
 
-var consolenotificationsKind = schema.GroupVersionKind{Group: "console.openshift.io", Version: "v1", Kind: "ConsoleNotification"}
+var consolenotificationsKind = schema.GroupVersionKind{Group: "console.uccp.io", Version: "v1", Kind: "ConsoleNotification"}
 
 // Get takes name of the consoleNotification, and returns the corresponding consoleNotification object, and an error if there is any.
 func (c *FakeConsoleNotifications) Get(ctx context.Context, name string, options v1.GetOptions) (result *consolev1.ConsoleNotification, err error) {

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	projectv1 "github.com/openshift/api/project/v1"
+	projectv1 "github.com/uccps-samples/api/project/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeProjects struct {
 	Fake *FakeProjectV1
 }
 
-var projectsResource = schema.GroupVersionResource{Group: "project.openshift.io", Version: "v1", Resource: "projects"}
+var projectsResource = schema.GroupVersionResource{Group: "project.uccp.io", Version: "v1", Resource: "projects"}
 
-var projectsKind = schema.GroupVersionKind{Group: "project.openshift.io", Version: "v1", Kind: "Project"}
+var projectsKind = schema.GroupVersionKind{Group: "project.uccp.io", Version: "v1", Kind: "Project"}
 
 // Get takes name of the project, and returns the corresponding project object, and an error if there is any.
 func (c *FakeProjects) Get(ctx context.Context, name string, options v1.GetOptions) (result *projectv1.Project, err error) {
