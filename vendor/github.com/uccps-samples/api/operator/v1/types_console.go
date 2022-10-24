@@ -207,8 +207,6 @@ type AddPage struct {
 type Brand string
 
 const (
-	// Branding for Uccp
-	BrandUccp Brand = "uccp"
 	// Branding for OpenShift
 	BrandOpenShift Brand = "openshift"
 	// Branding for The Origin Community Distribution of Kubernetes

@@ -173,7 +173,7 @@ const (
 
 	// CustomBuildStrategyBaseImageKey is the environment variable that indicates the base image to be used when
 	// performing a custom build, if needed.
-	CustomBuildStrategyBaseImageKey = "UCCP_CUSTOM_BUILD_BASE_IMAGE"
+	CustomBuildStrategyBaseImageKey = "OPENSHIFT_CUSTOM_BUILD_BASE_IMAGE"
 
 	// AllowedUIDs is an environment variable that contains ranges of UIDs that are allowed in
 	// Source builder images

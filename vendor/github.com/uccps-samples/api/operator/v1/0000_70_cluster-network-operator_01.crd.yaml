@@ -257,8 +257,8 @@ spec:
                         minimum: 1
                         type: integer
                     type: object
-                  UccpSDNConfig:
-                    description: UccpSDNConfig configures the uccp-sdn plugin
+                  openshiftSDNConfig:
+                    description: openShiftSDNConfig configures the uccp-sdn plugin
                     properties:
                       enableUnidling:
                         description: enableUnidling controls whether or not the service

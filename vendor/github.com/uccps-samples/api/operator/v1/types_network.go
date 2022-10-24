@@ -172,7 +172,7 @@ type DefaultNetworkDefinition struct {
 
 	// openShiftSDNConfig configures the uccp-sdn plugin
 	// +optional
-	OpenShiftSDNConfig *OpenShiftSDNConfig `json:"uccpSDNConfig,omitempty"`
+	OpenShiftSDNConfig *OpenShiftSDNConfig `json:"openshiftSDNConfig,omitempty"`
 
 	// ovnKubernetesConfig configures the ovn-kubernetes plugin.
 	// +optional
@@ -535,7 +535,7 @@ type ProxyConfig struct {
 
 const (
 	// NetworkTypeOpenShiftSDN means the uccp-sdn plugin will be configured
-	NetworkTypeOpenShiftSDN NetworkType = "UccpSDN"
+	NetworkTypeOpenShiftSDN NetworkType = "OpenShiftSDN"
 
 	// NetworkTypeOVNKubernetes means the ovn-kubernetes project will be configured.
 	// This is currently not implemented.
