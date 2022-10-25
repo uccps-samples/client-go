@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/route/v1"
-	"github.com/openshift/client-go/route/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/route/v1"
+	"github.com/uccps-samples/client-go/route/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -13,7 +13,7 @@ type RouteV1Interface interface {
 	RoutesGetter
 }
 
-// RouteV1Client is used to interact with features provided by the route.openshift.io group.
+// RouteV1Client is used to interact with features provided by the route.uccp.io group.
 type RouteV1Client struct {
 	restClient rest.Interface
 }

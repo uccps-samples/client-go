@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeClusterVersions struct {
 	Fake *FakeConfigV1
 }
 
-var clusterversionsResource = schema.GroupVersionResource{Group: "config.openshift.io", Version: "v1", Resource: "clusterversions"}
+var clusterversionsResource = schema.GroupVersionResource{Group: "config.uccp.io", Version: "v1", Resource: "clusterversions"}
 
-var clusterversionsKind = schema.GroupVersionKind{Group: "config.openshift.io", Version: "v1", Kind: "ClusterVersion"}
+var clusterversionsKind = schema.GroupVersionKind{Group: "config.uccp.io", Version: "v1", Kind: "ClusterVersion"}
 
 // Get takes name of the clusterVersion, and returns the corresponding clusterVersion object, and an error if there is any.
 func (c *FakeClusterVersions) Get(ctx context.Context, name string, options v1.GetOptions) (result *configv1.ClusterVersion, err error) {

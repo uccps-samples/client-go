@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	cloudnetworkv1 "github.com/openshift/api/cloudnetwork/v1"
+	cloudnetworkv1 "github.com/uccps-samples/api/cloudnetwork/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeCloudPrivateIPConfigs struct {
 	Fake *FakeCloudV1
 }
 
-var cloudprivateipconfigsResource = schema.GroupVersionResource{Group: "cloud.network.openshift.io", Version: "v1", Resource: "cloudprivateipconfigs"}
+var cloudprivateipconfigsResource = schema.GroupVersionResource{Group: "cloud.network.uccp.io", Version: "v1", Resource: "cloudprivateipconfigs"}
 
-var cloudprivateipconfigsKind = schema.GroupVersionKind{Group: "cloud.network.openshift.io", Version: "v1", Kind: "CloudPrivateIPConfig"}
+var cloudprivateipconfigsKind = schema.GroupVersionKind{Group: "cloud.network.uccp.io", Version: "v1", Kind: "CloudPrivateIPConfig"}
 
 // Get takes name of the cloudPrivateIPConfig, and returns the corresponding cloudPrivateIPConfig object, and an error if there is any.
 func (c *FakeCloudPrivateIPConfigs) Get(ctx context.Context, name string, options v1.GetOptions) (result *cloudnetworkv1.CloudPrivateIPConfig, err error) {

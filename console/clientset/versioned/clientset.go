@@ -5,8 +5,8 @@ package versioned
 import (
 	"fmt"
 
-	consolev1 "github.com/openshift/client-go/console/clientset/versioned/typed/console/v1"
-	consolev1alpha1 "github.com/openshift/client-go/console/clientset/versioned/typed/console/v1alpha1"
+	consolev1 "github.com/uccps-samples/client-go/console/clientset/versioned/typed/console/v1"
+	consolev1alpha1 "github.com/uccps-samples/client-go/console/clientset/versioned/typed/console/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

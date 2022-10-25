@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	networkv1 "github.com/openshift/api/network/v1"
+	networkv1 "github.com/uccps-samples/api/network/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeHostSubnets struct {
 	Fake *FakeNetworkV1
 }
 
-var hostsubnetsResource = schema.GroupVersionResource{Group: "network.openshift.io", Version: "v1", Resource: "hostsubnets"}
+var hostsubnetsResource = schema.GroupVersionResource{Group: "network.uccp.io", Version: "v1", Resource: "hostsubnets"}
 
-var hostsubnetsKind = schema.GroupVersionKind{Group: "network.openshift.io", Version: "v1", Kind: "HostSubnet"}
+var hostsubnetsKind = schema.GroupVersionKind{Group: "network.uccp.io", Version: "v1", Kind: "HostSubnet"}
 
 // Get takes name of the hostSubnet, and returns the corresponding hostSubnet object, and an error if there is any.
 func (c *FakeHostSubnets) Get(ctx context.Context, name string, options v1.GetOptions) (result *networkv1.HostSubnet, err error) {

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1alpha1 "github.com/openshift/api/operatorcontrolplane/v1alpha1"
+	v1alpha1 "github.com/uccps-samples/api/operatorcontrolplane/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -20,9 +20,9 @@ type FakePodNetworkConnectivityChecks struct {
 	ns   string
 }
 
-var podnetworkconnectivitychecksResource = schema.GroupVersionResource{Group: "controlplane.operator.openshift.io", Version: "v1alpha1", Resource: "podnetworkconnectivitychecks"}
+var podnetworkconnectivitychecksResource = schema.GroupVersionResource{Group: "controlplane.operator.uccp.io", Version: "v1alpha1", Resource: "podnetworkconnectivitychecks"}
 
-var podnetworkconnectivitychecksKind = schema.GroupVersionKind{Group: "controlplane.operator.openshift.io", Version: "v1alpha1", Kind: "PodNetworkConnectivityCheck"}
+var podnetworkconnectivitychecksKind = schema.GroupVersionKind{Group: "controlplane.operator.uccp.io", Version: "v1alpha1", Kind: "PodNetworkConnectivityCheck"}
 
 // Get takes name of the podNetworkConnectivityCheck, and returns the corresponding podNetworkConnectivityCheck object, and an error if there is any.
 func (c *FakePodNetworkConnectivityChecks) Get(ctx context.Context, name string, options v1.GetOptions) (result *v1alpha1.PodNetworkConnectivityCheck, err error) {

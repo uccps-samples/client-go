@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeConfigs struct {
 	Fake *FakeOperatorV1
 }
 
-var configsResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "configs"}
+var configsResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "configs"}
 
-var configsKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "Config"}
+var configsKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "Config"}
 
 // Get takes name of the config, and returns the corresponding config object, and an error if there is any.
 func (c *FakeConfigs) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.Config, err error) {

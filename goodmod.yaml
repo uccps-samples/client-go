@@ -20,5 +20,5 @@ rules:
     branch: prebase-origin-4.4-kubernetes-1.17.0-rc.2
 
   - paths:
-    - github.com/openshift/api
+    - github.com/uccps-samples/api
     branch: master

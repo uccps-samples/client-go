@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	consolev1 "github.com/openshift/api/console/v1"
+	consolev1 "github.com/uccps-samples/api/console/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeConsoleQuickStarts struct {
 	Fake *FakeConsoleV1
 }
 
-var consolequickstartsResource = schema.GroupVersionResource{Group: "console.openshift.io", Version: "v1", Resource: "consolequickstarts"}
+var consolequickstartsResource = schema.GroupVersionResource{Group: "console.uccp.io", Version: "v1", Resource: "consolequickstarts"}
 
-var consolequickstartsKind = schema.GroupVersionKind{Group: "console.openshift.io", Version: "v1", Kind: "ConsoleQuickStart"}
+var consolequickstartsKind = schema.GroupVersionKind{Group: "console.uccp.io", Version: "v1", Kind: "ConsoleQuickStart"}
 
 // Get takes name of the consoleQuickStart, and returns the corresponding consoleQuickStart object, and an error if there is any.
 func (c *FakeConsoleQuickStarts) Get(ctx context.Context, name string, options v1.GetOptions) (result *consolev1.ConsoleQuickStart, err error) {

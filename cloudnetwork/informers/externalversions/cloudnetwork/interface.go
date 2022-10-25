@@ -3,8 +3,8 @@
 package cloudnetwork
 
 import (
-	v1 "github.com/openshift/client-go/cloudnetwork/informers/externalversions/cloudnetwork/v1"
-	internalinterfaces "github.com/openshift/client-go/cloudnetwork/informers/externalversions/internalinterfaces"
+	v1 "github.com/uccps-samples/client-go/cloudnetwork/informers/externalversions/cloudnetwork/v1"
+	internalinterfaces "github.com/uccps-samples/client-go/cloudnetwork/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

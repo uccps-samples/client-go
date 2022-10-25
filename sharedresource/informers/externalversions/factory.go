@@ -7,9 +7,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/openshift/client-go/sharedresource/clientset/versioned"
-	internalinterfaces "github.com/openshift/client-go/sharedresource/informers/externalversions/internalinterfaces"
-	sharedresource "github.com/openshift/client-go/sharedresource/informers/externalversions/sharedresource"
+	versioned "github.com/uccps-samples/client-go/sharedresource/clientset/versioned"
+	internalinterfaces "github.com/uccps-samples/client-go/sharedresource/informers/externalversions/internalinterfaces"
+	sharedresource "github.com/uccps-samples/client-go/sharedresource/informers/externalversions/sharedresource"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

@@ -5,7 +5,7 @@ package versioned
 import (
 	"fmt"
 
-	securityv1 "github.com/openshift/client-go/securityinternal/clientset/versioned/typed/securityinternal/v1"
+	securityv1 "github.com/uccps-samples/client-go/securityinternal/clientset/versioned/typed/securityinternal/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

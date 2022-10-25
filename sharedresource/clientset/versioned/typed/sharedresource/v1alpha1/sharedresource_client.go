@@ -3,8 +3,8 @@
 package v1alpha1
 
 import (
-	v1alpha1 "github.com/openshift/api/sharedresource/v1alpha1"
-	"github.com/openshift/client-go/sharedresource/clientset/versioned/scheme"
+	v1alpha1 "github.com/uccps-samples/api/sharedresource/v1alpha1"
+	"github.com/uccps-samples/client-go/sharedresource/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -14,7 +14,7 @@ type SharedresourceV1alpha1Interface interface {
 	SharedSecretsGetter
 }
 
-// SharedresourceV1alpha1Client is used to interact with features provided by the sharedresource.openshift.io group.
+// SharedresourceV1alpha1Client is used to interact with features provided by the sharedresource.uccp.io group.
 type SharedresourceV1alpha1Client struct {
 	restClient rest.Interface
 }

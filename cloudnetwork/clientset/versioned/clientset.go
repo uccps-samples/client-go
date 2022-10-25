@@ -5,7 +5,7 @@ package versioned
 import (
 	"fmt"
 
-	cloudv1 "github.com/openshift/client-go/cloudnetwork/clientset/versioned/typed/cloudnetwork/v1"
+	cloudv1 "github.com/uccps-samples/client-go/cloudnetwork/clientset/versioned/typed/cloudnetwork/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

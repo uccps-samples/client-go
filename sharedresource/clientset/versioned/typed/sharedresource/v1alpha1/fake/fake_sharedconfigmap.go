@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1alpha1 "github.com/openshift/api/sharedresource/v1alpha1"
+	v1alpha1 "github.com/uccps-samples/api/sharedresource/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeSharedConfigMaps struct {
 	Fake *FakeSharedresourceV1alpha1
 }
 
-var sharedconfigmapsResource = schema.GroupVersionResource{Group: "sharedresource.openshift.io", Version: "v1alpha1", Resource: "sharedconfigmaps"}
+var sharedconfigmapsResource = schema.GroupVersionResource{Group: "sharedresource.uccp.io", Version: "v1alpha1", Resource: "sharedconfigmaps"}
 
-var sharedconfigmapsKind = schema.GroupVersionKind{Group: "sharedresource.openshift.io", Version: "v1alpha1", Kind: "SharedConfigMap"}
+var sharedconfigmapsKind = schema.GroupVersionKind{Group: "sharedresource.uccp.io", Version: "v1alpha1", Kind: "SharedConfigMap"}
 
 // Get takes name of the sharedConfigMap, and returns the corresponding sharedConfigMap object, and an error if there is any.
 func (c *FakeSharedConfigMaps) Get(ctx context.Context, name string, options v1.GetOptions) (result *v1alpha1.SharedConfigMap, err error) {

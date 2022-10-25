@@ -3,7 +3,7 @@
 package v1
 
 import (
-	internalinterfaces "github.com/openshift/client-go/apiserver/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/uccps-samples/client-go/apiserver/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

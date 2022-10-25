@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	userv1 "github.com/openshift/api/user/v1"
+	userv1 "github.com/uccps-samples/api/user/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeIdentities struct {
 	Fake *FakeUserV1
 }
 
-var identitiesResource = schema.GroupVersionResource{Group: "user.openshift.io", Version: "v1", Resource: "identities"}
+var identitiesResource = schema.GroupVersionResource{Group: "user.uccp.io", Version: "v1", Resource: "identities"}
 
-var identitiesKind = schema.GroupVersionKind{Group: "user.openshift.io", Version: "v1", Kind: "Identity"}
+var identitiesKind = schema.GroupVersionKind{Group: "user.uccp.io", Version: "v1", Kind: "Identity"}
 
 // Get takes name of the identity, and returns the corresponding identity object, and an error if there is any.
 func (c *FakeIdentities) Get(ctx context.Context, name string, options v1.GetOptions) (result *userv1.Identity, err error) {

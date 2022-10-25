@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1 "github.com/openshift/api/security/v1"
+	v1 "github.com/uccps-samples/api/security/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -17,9 +17,9 @@ type FakePodSecurityPolicySelfSubjectReviews struct {
 	ns   string
 }
 
-var podsecuritypolicyselfsubjectreviewsResource = schema.GroupVersionResource{Group: "security.openshift.io", Version: "v1", Resource: "podsecuritypolicyselfsubjectreviews"}
+var podsecuritypolicyselfsubjectreviewsResource = schema.GroupVersionResource{Group: "security.uccp.io", Version: "v1", Resource: "podsecuritypolicyselfsubjectreviews"}
 
-var podsecuritypolicyselfsubjectreviewsKind = schema.GroupVersionKind{Group: "security.openshift.io", Version: "v1", Kind: "PodSecurityPolicySelfSubjectReview"}
+var podsecuritypolicyselfsubjectreviewsKind = schema.GroupVersionKind{Group: "security.uccp.io", Version: "v1", Kind: "PodSecurityPolicySelfSubjectReview"}
 
 // Create takes the representation of a podSecurityPolicySelfSubjectReview and creates it.  Returns the server's representation of the podSecurityPolicySelfSubjectReview, and an error, if there is any.
 func (c *FakePodSecurityPolicySelfSubjectReviews) Create(ctx context.Context, podSecurityPolicySelfSubjectReview *v1.PodSecurityPolicySelfSubjectReview, opts metav1.CreateOptions) (result *v1.PodSecurityPolicySelfSubjectReview, err error) {

@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/authorization/v1"
-	"github.com/openshift/client-go/authorization/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/authorization/v1"
+	"github.com/uccps-samples/client-go/authorization/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -23,7 +23,7 @@ type AuthorizationV1Interface interface {
 	SubjectRulesReviewsGetter
 }
 
-// AuthorizationV1Client is used to interact with features provided by the authorization.openshift.io group.
+// AuthorizationV1Client is used to interact with features provided by the authorization.uccp.io group.
 type AuthorizationV1Client struct {
 	restClient rest.Interface
 }

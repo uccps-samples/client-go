@@ -3,9 +3,9 @@
 package console
 
 import (
-	v1 "github.com/openshift/client-go/console/informers/externalversions/console/v1"
-	v1alpha1 "github.com/openshift/client-go/console/informers/externalversions/console/v1alpha1"
-	internalinterfaces "github.com/openshift/client-go/console/informers/externalversions/internalinterfaces"
+	v1 "github.com/uccps-samples/client-go/console/informers/externalversions/console/v1"
+	v1alpha1 "github.com/uccps-samples/client-go/console/informers/externalversions/console/v1alpha1"
+	internalinterfaces "github.com/uccps-samples/client-go/console/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

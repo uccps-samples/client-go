@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/project/v1"
-	"github.com/openshift/client-go/project/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/project/v1"
+	"github.com/uccps-samples/client-go/project/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -14,7 +14,7 @@ type ProjectV1Interface interface {
 	ProjectRequestsGetter
 }
 
-// ProjectV1Client is used to interact with features provided by the project.openshift.io group.
+// ProjectV1Client is used to interact with features provided by the project.uccp.io group.
 type ProjectV1Client struct {
 	restClient rest.Interface
 }

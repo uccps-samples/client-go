@@ -3,8 +3,8 @@
 package helm
 
 import (
-	v1beta1 "github.com/openshift/client-go/helm/informers/externalversions/helm/v1beta1"
-	internalinterfaces "github.com/openshift/client-go/helm/informers/externalversions/internalinterfaces"
+	v1beta1 "github.com/uccps-samples/client-go/helm/informers/externalversions/helm/v1beta1"
+	internalinterfaces "github.com/uccps-samples/client-go/helm/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

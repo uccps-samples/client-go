@@ -3,9 +3,9 @@
 package fake
 
 import (
-	clientset "github.com/openshift/client-go/sharedresource/clientset/versioned"
-	sharedresourcev1alpha1 "github.com/openshift/client-go/sharedresource/clientset/versioned/typed/sharedresource/v1alpha1"
-	fakesharedresourcev1alpha1 "github.com/openshift/client-go/sharedresource/clientset/versioned/typed/sharedresource/v1alpha1/fake"
+	clientset "github.com/uccps-samples/client-go/sharedresource/clientset/versioned"
+	sharedresourcev1alpha1 "github.com/uccps-samples/client-go/sharedresource/clientset/versioned/typed/sharedresource/v1alpha1"
+	fakesharedresourcev1alpha1 "github.com/uccps-samples/client-go/sharedresource/clientset/versioned/typed/sharedresource/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1 "github.com/openshift/api/project/v1"
+	v1 "github.com/uccps-samples/api/project/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -16,9 +16,9 @@ type FakeProjectRequests struct {
 	Fake *FakeProjectV1
 }
 
-var projectrequestsResource = schema.GroupVersionResource{Group: "project.openshift.io", Version: "v1", Resource: "projectrequests"}
+var projectrequestsResource = schema.GroupVersionResource{Group: "project.uccp.io", Version: "v1", Resource: "projectrequests"}
 
-var projectrequestsKind = schema.GroupVersionKind{Group: "project.openshift.io", Version: "v1", Kind: "ProjectRequest"}
+var projectrequestsKind = schema.GroupVersionKind{Group: "project.uccp.io", Version: "v1", Kind: "ProjectRequest"}
 
 // Create takes the representation of a projectRequest and creates it.  Returns the server's representation of the project, and an error, if there is any.
 func (c *FakeProjectRequests) Create(ctx context.Context, projectRequest *v1.ProjectRequest, opts metav1.CreateOptions) (result *v1.Project, err error) {

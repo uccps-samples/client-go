@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/cloudnetwork/v1"
-	"github.com/openshift/client-go/cloudnetwork/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/cloudnetwork/v1"
+	"github.com/uccps-samples/client-go/cloudnetwork/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -13,7 +13,7 @@ type CloudV1Interface interface {
 	CloudPrivateIPConfigsGetter
 }
 
-// CloudV1Client is used to interact with features provided by the cloud.network.openshift.io group.
+// CloudV1Client is used to interact with features provided by the cloud.network.uccp.io group.
 type CloudV1Client struct {
 	restClient rest.Interface
 }

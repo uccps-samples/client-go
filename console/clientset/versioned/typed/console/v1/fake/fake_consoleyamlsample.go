@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	consolev1 "github.com/openshift/api/console/v1"
+	consolev1 "github.com/uccps-samples/api/console/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeConsoleYAMLSamples struct {
 	Fake *FakeConsoleV1
 }
 
-var consoleyamlsamplesResource = schema.GroupVersionResource{Group: "console.openshift.io", Version: "v1", Resource: "consoleyamlsamples"}
+var consoleyamlsamplesResource = schema.GroupVersionResource{Group: "console.uccp.io", Version: "v1", Resource: "consoleyamlsamples"}
 
-var consoleyamlsamplesKind = schema.GroupVersionKind{Group: "console.openshift.io", Version: "v1", Kind: "ConsoleYAMLSample"}
+var consoleyamlsamplesKind = schema.GroupVersionKind{Group: "console.uccp.io", Version: "v1", Kind: "ConsoleYAMLSample"}
 
 // Get takes name of the consoleYAMLSample, and returns the corresponding consoleYAMLSample object, and an error if there is any.
 func (c *FakeConsoleYAMLSamples) Get(ctx context.Context, name string, options v1.GetOptions) (result *consolev1.ConsoleYAMLSample, err error) {

@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/securityinternal/v1"
-	"github.com/openshift/client-go/securityinternal/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/securityinternal/v1"
+	"github.com/uccps-samples/client-go/securityinternal/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -13,7 +13,7 @@ type SecurityV1Interface interface {
 	RangeAllocationsGetter
 }
 
-// SecurityV1Client is used to interact with features provided by the security.internal.openshift.io group.
+// SecurityV1Client is used to interact with features provided by the security.internal.uccp.io group.
 type SecurityV1Client struct {
 	restClient rest.Interface
 }

@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/apiserver/v1"
-	"github.com/openshift/client-go/apiserver/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/apiserver/v1"
+	"github.com/uccps-samples/client-go/apiserver/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -13,7 +13,7 @@ type ApiserverV1Interface interface {
 	APIRequestCountsGetter
 }
 
-// ApiserverV1Client is used to interact with features provided by the apiserver.openshift.io group.
+// ApiserverV1Client is used to interact with features provided by the apiserver.uccp.io group.
 type ApiserverV1Client struct {
 	restClient rest.Interface
 }

@@ -3,7 +3,7 @@
 package scheme
 
 import (
-	cloudv1 "github.com/openshift/api/cloudnetwork/v1"
+	cloudv1 "github.com/uccps-samples/api/cloudnetwork/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

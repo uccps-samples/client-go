@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeKubeControllerManagers struct {
 	Fake *FakeOperatorV1
 }
 
-var kubecontrollermanagersResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "kubecontrollermanagers"}
+var kubecontrollermanagersResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "kubecontrollermanagers"}
 
-var kubecontrollermanagersKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "KubeControllerManager"}
+var kubecontrollermanagersKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "KubeControllerManager"}
 
 // Get takes name of the kubeControllerManager, and returns the corresponding kubeControllerManager object, and an error if there is any.
 func (c *FakeKubeControllerManagers) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.KubeControllerManager, err error) {

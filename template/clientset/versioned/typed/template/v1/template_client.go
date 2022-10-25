@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/template/v1"
-	"github.com/openshift/client-go/template/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/template/v1"
+	"github.com/uccps-samples/client-go/template/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -15,7 +15,7 @@ type TemplateV1Interface interface {
 	TemplateInstancesGetter
 }
 
-// TemplateV1Client is used to interact with features provided by the template.openshift.io group.
+// TemplateV1Client is used to interact with features provided by the template.uccp.io group.
 type TemplateV1Client struct {
 	restClient rest.Interface
 }

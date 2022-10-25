@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeClusterOperators struct {
 	Fake *FakeConfigV1
 }
 
-var clusteroperatorsResource = schema.GroupVersionResource{Group: "config.openshift.io", Version: "v1", Resource: "clusteroperators"}
+var clusteroperatorsResource = schema.GroupVersionResource{Group: "config.uccp.io", Version: "v1", Resource: "clusteroperators"}
 
-var clusteroperatorsKind = schema.GroupVersionKind{Group: "config.openshift.io", Version: "v1", Kind: "ClusterOperator"}
+var clusteroperatorsKind = schema.GroupVersionKind{Group: "config.uccp.io", Version: "v1", Kind: "ClusterOperator"}
 
 // Get takes name of the clusterOperator, and returns the corresponding clusterOperator object, and an error if there is any.
 func (c *FakeClusterOperators) Get(ctx context.Context, name string, options v1.GetOptions) (result *configv1.ClusterOperator, err error) {

@@ -5,7 +5,7 @@ package versioned
 import (
 	"fmt"
 
-	sharedresourcev1alpha1 "github.com/openshift/client-go/sharedresource/clientset/versioned/typed/sharedresource/v1alpha1"
+	sharedresourcev1alpha1 "github.com/uccps-samples/client-go/sharedresource/clientset/versioned/typed/sharedresource/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
