@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	networkv1 "github.com/openshift/api/network/v1"
+	networkv1 "github.com/uccps-samples/api/network/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeClusterNetworks struct {
 	Fake *FakeNetworkV1
 }
 
-var clusternetworksResource = schema.GroupVersionResource{Group: "network.openshift.io", Version: "v1", Resource: "clusternetworks"}
+var clusternetworksResource = schema.GroupVersionResource{Group: "network.uccp.io", Version: "v1", Resource: "clusternetworks"}
 
-var clusternetworksKind = schema.GroupVersionKind{Group: "network.openshift.io", Version: "v1", Kind: "ClusterNetwork"}
+var clusternetworksKind = schema.GroupVersionKind{Group: "network.uccp.io", Version: "v1", Kind: "ClusterNetwork"}
 
 // Get takes name of the clusterNetwork, and returns the corresponding clusterNetwork object, and an error if there is any.
 func (c *FakeClusterNetworks) Get(ctx context.Context, name string, options v1.GetOptions) (result *networkv1.ClusterNetwork, err error) {

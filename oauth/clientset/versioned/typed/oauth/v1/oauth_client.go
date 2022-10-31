@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/oauth/v1"
-	"github.com/openshift/client-go/oauth/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/oauth/v1"
+	"github.com/uccps-samples/client-go/oauth/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -16,7 +16,7 @@ type OauthV1Interface interface {
 	OAuthClientAuthorizationsGetter
 }
 
-// OauthV1Client is used to interact with features provided by the oauth.openshift.io group.
+// OauthV1Client is used to interact with features provided by the oauth.uccp.io group.
 type OauthV1Client struct {
 	restClient rest.Interface
 }

@@ -3,7 +3,7 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/operator/v1"
+	v1 "github.com/uccps-samples/api/operator/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/client-go/tools/cache"
@@ -46,7 +46,7 @@ func (s *openShiftAPIServerLister) Get(name string) (*v1.OpenShiftAPIServer, err
 		return nil, err
 	}
 	if !exists {
-		return nil, errors.NewNotFound(v1.Resource("openshiftapiserver"), name)
+		return nil, errors.NewNotFound(v1.Resource("uccpapiserver"), name)
 	}
 	return obj.(*v1.OpenShiftAPIServer), nil
 }

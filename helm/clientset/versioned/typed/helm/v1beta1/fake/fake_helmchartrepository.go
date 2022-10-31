@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1beta1 "github.com/openshift/api/helm/v1beta1"
+	v1beta1 "github.com/uccps-samples/api/helm/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeHelmChartRepositories struct {
 	Fake *FakeHelmV1beta1
 }
 
-var helmchartrepositoriesResource = schema.GroupVersionResource{Group: "helm.openshift.io", Version: "v1beta1", Resource: "helmchartrepositories"}
+var helmchartrepositoriesResource = schema.GroupVersionResource{Group: "helm.uccp.io", Version: "v1beta1", Resource: "helmchartrepositories"}
 
-var helmchartrepositoriesKind = schema.GroupVersionKind{Group: "helm.openshift.io", Version: "v1beta1", Kind: "HelmChartRepository"}
+var helmchartrepositoriesKind = schema.GroupVersionKind{Group: "helm.uccp.io", Version: "v1beta1", Kind: "HelmChartRepository"}
 
 // Get takes name of the helmChartRepository, and returns the corresponding helmChartRepository object, and an error if there is any.
 func (c *FakeHelmChartRepositories) Get(ctx context.Context, name string, options v1.GetOptions) (result *v1beta1.HelmChartRepository, err error) {

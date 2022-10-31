@@ -3,11 +3,11 @@
 package fake
 
 import (
-	clientset "github.com/openshift/client-go/operator/clientset/versioned"
-	operatorv1 "github.com/openshift/client-go/operator/clientset/versioned/typed/operator/v1"
-	fakeoperatorv1 "github.com/openshift/client-go/operator/clientset/versioned/typed/operator/v1/fake"
-	operatorv1alpha1 "github.com/openshift/client-go/operator/clientset/versioned/typed/operator/v1alpha1"
-	fakeoperatorv1alpha1 "github.com/openshift/client-go/operator/clientset/versioned/typed/operator/v1alpha1/fake"
+	clientset "github.com/uccps-samples/client-go/operator/clientset/versioned"
+	operatorv1 "github.com/uccps-samples/client-go/operator/clientset/versioned/typed/operator/v1"
+	fakeoperatorv1 "github.com/uccps-samples/client-go/operator/clientset/versioned/typed/operator/v1/fake"
+	operatorv1alpha1 "github.com/uccps-samples/client-go/operator/clientset/versioned/typed/operator/v1alpha1"
+	fakeoperatorv1alpha1 "github.com/uccps-samples/client-go/operator/clientset/versioned/typed/operator/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

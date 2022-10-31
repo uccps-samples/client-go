@@ -3,7 +3,7 @@
 package fake
 
 import (
-	v1 "github.com/openshift/client-go/console/clientset/versioned/typed/console/v1"
+	v1 "github.com/uccps-samples/client-go/console/clientset/versioned/typed/console/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

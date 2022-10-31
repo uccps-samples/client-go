@@ -3,7 +3,7 @@
 package scheme
 
 import (
-	controlplanev1alpha1 "github.com/openshift/api/operatorcontrolplane/v1alpha1"
+	controlplanev1alpha1 "github.com/uccps-samples/api/operatorcontrolplane/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

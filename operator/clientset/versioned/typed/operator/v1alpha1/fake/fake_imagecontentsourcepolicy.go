@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1alpha1 "github.com/openshift/api/operator/v1alpha1"
+	v1alpha1 "github.com/uccps-samples/api/operator/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeImageContentSourcePolicies struct {
 	Fake *FakeOperatorV1alpha1
 }
 
-var imagecontentsourcepoliciesResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1alpha1", Resource: "imagecontentsourcepolicies"}
+var imagecontentsourcepoliciesResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1alpha1", Resource: "imagecontentsourcepolicies"}
 
-var imagecontentsourcepoliciesKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1alpha1", Kind: "ImageContentSourcePolicy"}
+var imagecontentsourcepoliciesKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1alpha1", Kind: "ImageContentSourcePolicy"}
 
 // Get takes name of the imageContentSourcePolicy, and returns the corresponding imageContentSourcePolicy object, and an error if there is any.
 func (c *FakeImageContentSourcePolicies) Get(ctx context.Context, name string, options v1.GetOptions) (result *v1alpha1.ImageContentSourcePolicy, err error) {

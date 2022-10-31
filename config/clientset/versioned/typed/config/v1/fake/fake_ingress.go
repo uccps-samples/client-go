@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeIngresses struct {
 	Fake *FakeConfigV1
 }
 
-var ingressesResource = schema.GroupVersionResource{Group: "config.openshift.io", Version: "v1", Resource: "ingresses"}
+var ingressesResource = schema.GroupVersionResource{Group: "config.uccp.io", Version: "v1", Resource: "ingresses"}
 
-var ingressesKind = schema.GroupVersionKind{Group: "config.openshift.io", Version: "v1", Kind: "Ingress"}
+var ingressesKind = schema.GroupVersionKind{Group: "config.uccp.io", Version: "v1", Kind: "Ingress"}
 
 // Get takes name of the ingress, and returns the corresponding ingress object, and an error if there is any.
 func (c *FakeIngresses) Get(ctx context.Context, name string, options v1.GetOptions) (result *configv1.Ingress, err error) {

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	appsv1 "github.com/openshift/api/apps/v1"
+	appsv1 "github.com/uccps-samples/api/apps/v1"
 	v1beta1 "k8s.io/api/extensions/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
@@ -21,9 +21,9 @@ type FakeDeploymentConfigs struct {
 	ns   string
 }
 
-var deploymentconfigsResource = schema.GroupVersionResource{Group: "apps.openshift.io", Version: "v1", Resource: "deploymentconfigs"}
+var deploymentconfigsResource = schema.GroupVersionResource{Group: "apps.uccp.io", Version: "v1", Resource: "deploymentconfigs"}
 
-var deploymentconfigsKind = schema.GroupVersionKind{Group: "apps.openshift.io", Version: "v1", Kind: "DeploymentConfig"}
+var deploymentconfigsKind = schema.GroupVersionKind{Group: "apps.uccp.io", Version: "v1", Kind: "DeploymentConfig"}
 
 // Get takes name of the deploymentConfig, and returns the corresponding deploymentConfig object, and an error if there is any.
 func (c *FakeDeploymentConfigs) Get(ctx context.Context, name string, options v1.GetOptions) (result *appsv1.DeploymentConfig, err error) {

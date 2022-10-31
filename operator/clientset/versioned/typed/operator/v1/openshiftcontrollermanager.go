@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	v1 "github.com/openshift/api/operator/v1"
-	scheme "github.com/openshift/client-go/operator/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/operator/v1"
+	scheme "github.com/uccps-samples/client-go/operator/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -50,7 +50,7 @@ func newOpenShiftControllerManagers(c *OperatorV1Client) *openShiftControllerMan
 func (c *openShiftControllerManagers) Get(ctx context.Context, name string, options metav1.GetOptions) (result *v1.OpenShiftControllerManager, err error) {
 	result = &v1.OpenShiftControllerManager{}
 	err = c.client.Get().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
 		Do(ctx).
@@ -66,7 +66,7 @@ func (c *openShiftControllerManagers) List(ctx context.Context, opts metav1.List
 	}
 	result = &v1.OpenShiftControllerManagerList{}
 	err = c.client.Get().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Do(ctx).
@@ -82,7 +82,7 @@ func (c *openShiftControllerManagers) Watch(ctx context.Context, opts metav1.Lis
 	}
 	opts.Watch = true
 	return c.client.Get().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Watch(ctx)
@@ -92,7 +92,7 @@ func (c *openShiftControllerManagers) Watch(ctx context.Context, opts metav1.Lis
 func (c *openShiftControllerManagers) Create(ctx context.Context, openShiftControllerManager *v1.OpenShiftControllerManager, opts metav1.CreateOptions) (result *v1.OpenShiftControllerManager, err error) {
 	result = &v1.OpenShiftControllerManager{}
 	err = c.client.Post().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(openShiftControllerManager).
 		Do(ctx).
@@ -104,7 +104,7 @@ func (c *openShiftControllerManagers) Create(ctx context.Context, openShiftContr
 func (c *openShiftControllerManagers) Update(ctx context.Context, openShiftControllerManager *v1.OpenShiftControllerManager, opts metav1.UpdateOptions) (result *v1.OpenShiftControllerManager, err error) {
 	result = &v1.OpenShiftControllerManager{}
 	err = c.client.Put().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		Name(openShiftControllerManager.Name).
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(openShiftControllerManager).
@@ -118,7 +118,7 @@ func (c *openShiftControllerManagers) Update(ctx context.Context, openShiftContr
 func (c *openShiftControllerManagers) UpdateStatus(ctx context.Context, openShiftControllerManager *v1.OpenShiftControllerManager, opts metav1.UpdateOptions) (result *v1.OpenShiftControllerManager, err error) {
 	result = &v1.OpenShiftControllerManager{}
 	err = c.client.Put().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		Name(openShiftControllerManager.Name).
 		SubResource("status").
 		VersionedParams(&opts, scheme.ParameterCodec).
@@ -131,7 +131,7 @@ func (c *openShiftControllerManagers) UpdateStatus(ctx context.Context, openShif
 // Delete takes name of the openShiftControllerManager and deletes it. Returns an error if one occurs.
 func (c *openShiftControllerManagers) Delete(ctx context.Context, name string, opts metav1.DeleteOptions) error {
 	return c.client.Delete().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		Name(name).
 		Body(&opts).
 		Do(ctx).
@@ -145,7 +145,7 @@ func (c *openShiftControllerManagers) DeleteCollection(ctx context.Context, opts
 		timeout = time.Duration(*listOpts.TimeoutSeconds) * time.Second
 	}
 	return c.client.Delete().
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		VersionedParams(&listOpts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(&opts).
@@ -157,7 +157,7 @@ func (c *openShiftControllerManagers) DeleteCollection(ctx context.Context, opts
 func (c *openShiftControllerManagers) Patch(ctx context.Context, name string, pt types.PatchType, data []byte, opts metav1.PatchOptions, subresources ...string) (result *v1.OpenShiftControllerManager, err error) {
 	result = &v1.OpenShiftControllerManager{}
 	err = c.client.Patch(pt).
-		Resource("openshiftcontrollermanagers").
+		Resource("uccpcontrollermanagers").
 		Name(name).
 		SubResource(subresources...).
 		VersionedParams(&opts, scheme.ParameterCodec).

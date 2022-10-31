@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	oauthv1 "github.com/openshift/api/oauth/v1"
+	oauthv1 "github.com/uccps-samples/api/oauth/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeOAuthAuthorizeTokens struct {
 	Fake *FakeOauthV1
 }
 
-var oauthauthorizetokensResource = schema.GroupVersionResource{Group: "oauth.openshift.io", Version: "v1", Resource: "oauthauthorizetokens"}
+var oauthauthorizetokensResource = schema.GroupVersionResource{Group: "oauth.uccp.io", Version: "v1", Resource: "oauthauthorizetokens"}
 
-var oauthauthorizetokensKind = schema.GroupVersionKind{Group: "oauth.openshift.io", Version: "v1", Kind: "OAuthAuthorizeToken"}
+var oauthauthorizetokensKind = schema.GroupVersionKind{Group: "oauth.uccp.io", Version: "v1", Kind: "OAuthAuthorizeToken"}
 
 // Get takes name of the oAuthAuthorizeToken, and returns the corresponding oAuthAuthorizeToken object, and an error if there is any.
 func (c *FakeOAuthAuthorizeTokens) Get(ctx context.Context, name string, options v1.GetOptions) (result *oauthv1.OAuthAuthorizeToken, err error) {

@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1 "github.com/openshift/api/image/v1"
+	v1 "github.com/uccps-samples/api/image/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -17,9 +17,9 @@ type FakeImageStreamImports struct {
 	ns   string
 }
 
-var imagestreamimportsResource = schema.GroupVersionResource{Group: "image.openshift.io", Version: "v1", Resource: "imagestreamimports"}
+var imagestreamimportsResource = schema.GroupVersionResource{Group: "image.uccp.io", Version: "v1", Resource: "imagestreamimports"}
 
-var imagestreamimportsKind = schema.GroupVersionKind{Group: "image.openshift.io", Version: "v1", Kind: "ImageStreamImport"}
+var imagestreamimportsKind = schema.GroupVersionKind{Group: "image.uccp.io", Version: "v1", Kind: "ImageStreamImport"}
 
 // Create takes the representation of a imageStreamImport and creates it.  Returns the server's representation of the imageStreamImport, and an error, if there is any.
 func (c *FakeImageStreamImports) Create(ctx context.Context, imageStreamImport *v1.ImageStreamImport, opts metav1.CreateOptions) (result *v1.ImageStreamImport, err error) {

@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/operator/v1"
-	"github.com/openshift/client-go/operator/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/operator/v1"
+	"github.com/uccps-samples/client-go/operator/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -32,7 +32,7 @@ type OperatorV1Interface interface {
 	StoragesGetter
 }
 
-// OperatorV1Client is used to interact with features provided by the operator.openshift.io group.
+// OperatorV1Client is used to interact with features provided by the operator.uccp.io group.
 type OperatorV1Client struct {
 	restClient rest.Interface
 }

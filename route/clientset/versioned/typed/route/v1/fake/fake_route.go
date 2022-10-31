@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	routev1 "github.com/openshift/api/route/v1"
+	routev1 "github.com/uccps-samples/api/route/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -20,9 +20,9 @@ type FakeRoutes struct {
 	ns   string
 }
 
-var routesResource = schema.GroupVersionResource{Group: "route.openshift.io", Version: "v1", Resource: "routes"}
+var routesResource = schema.GroupVersionResource{Group: "route.uccp.io", Version: "v1", Resource: "routes"}
 
-var routesKind = schema.GroupVersionKind{Group: "route.openshift.io", Version: "v1", Kind: "Route"}
+var routesKind = schema.GroupVersionKind{Group: "route.uccp.io", Version: "v1", Kind: "Route"}
 
 // Get takes name of the route, and returns the corresponding route object, and an error if there is any.
 func (c *FakeRoutes) Get(ctx context.Context, name string, options v1.GetOptions) (result *routev1.Route, err error) {

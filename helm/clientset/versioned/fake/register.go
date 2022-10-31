@@ -3,7 +3,7 @@
 package fake
 
 import (
-	helmv1beta1 "github.com/openshift/api/helm/v1beta1"
+	helmv1beta1 "github.com/uccps-samples/api/helm/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

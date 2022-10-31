@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/image/v1"
-	"github.com/openshift/client-go/image/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/image/v1"
+	"github.com/uccps-samples/client-go/image/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -20,7 +20,7 @@ type ImageV1Interface interface {
 	ImageTagsGetter
 }
 
-// ImageV1Client is used to interact with features provided by the image.openshift.io group.
+// ImageV1Client is used to interact with features provided by the image.uccp.io group.
 type ImageV1Client struct {
 	restClient rest.Interface
 }

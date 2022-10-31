@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	v1 "github.com/openshift/api/operator/v1"
-	scheme "github.com/openshift/client-go/operator/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/operator/v1"
+	scheme "github.com/uccps-samples/client-go/operator/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -50,7 +50,7 @@ func newOpenShiftAPIServers(c *OperatorV1Client) *openShiftAPIServers {
 func (c *openShiftAPIServers) Get(ctx context.Context, name string, options metav1.GetOptions) (result *v1.OpenShiftAPIServer, err error) {
 	result = &v1.OpenShiftAPIServer{}
 	err = c.client.Get().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
 		Do(ctx).
@@ -66,7 +66,7 @@ func (c *openShiftAPIServers) List(ctx context.Context, opts metav1.ListOptions)
 	}
 	result = &v1.OpenShiftAPIServerList{}
 	err = c.client.Get().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Do(ctx).
@@ -82,7 +82,7 @@ func (c *openShiftAPIServers) Watch(ctx context.Context, opts metav1.ListOptions
 	}
 	opts.Watch = true
 	return c.client.Get().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Watch(ctx)
@@ -92,7 +92,7 @@ func (c *openShiftAPIServers) Watch(ctx context.Context, opts metav1.ListOptions
 func (c *openShiftAPIServers) Create(ctx context.Context, openShiftAPIServer *v1.OpenShiftAPIServer, opts metav1.CreateOptions) (result *v1.OpenShiftAPIServer, err error) {
 	result = &v1.OpenShiftAPIServer{}
 	err = c.client.Post().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(openShiftAPIServer).
 		Do(ctx).
@@ -104,7 +104,7 @@ func (c *openShiftAPIServers) Create(ctx context.Context, openShiftAPIServer *v1
 func (c *openShiftAPIServers) Update(ctx context.Context, openShiftAPIServer *v1.OpenShiftAPIServer, opts metav1.UpdateOptions) (result *v1.OpenShiftAPIServer, err error) {
 	result = &v1.OpenShiftAPIServer{}
 	err = c.client.Put().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		Name(openShiftAPIServer.Name).
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(openShiftAPIServer).
@@ -118,7 +118,7 @@ func (c *openShiftAPIServers) Update(ctx context.Context, openShiftAPIServer *v1
 func (c *openShiftAPIServers) UpdateStatus(ctx context.Context, openShiftAPIServer *v1.OpenShiftAPIServer, opts metav1.UpdateOptions) (result *v1.OpenShiftAPIServer, err error) {
 	result = &v1.OpenShiftAPIServer{}
 	err = c.client.Put().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		Name(openShiftAPIServer.Name).
 		SubResource("status").
 		VersionedParams(&opts, scheme.ParameterCodec).
@@ -131,7 +131,7 @@ func (c *openShiftAPIServers) UpdateStatus(ctx context.Context, openShiftAPIServ
 // Delete takes name of the openShiftAPIServer and deletes it. Returns an error if one occurs.
 func (c *openShiftAPIServers) Delete(ctx context.Context, name string, opts metav1.DeleteOptions) error {
 	return c.client.Delete().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		Name(name).
 		Body(&opts).
 		Do(ctx).
@@ -145,7 +145,7 @@ func (c *openShiftAPIServers) DeleteCollection(ctx context.Context, opts metav1.
 		timeout = time.Duration(*listOpts.TimeoutSeconds) * time.Second
 	}
 	return c.client.Delete().
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		VersionedParams(&listOpts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(&opts).
@@ -157,7 +157,7 @@ func (c *openShiftAPIServers) DeleteCollection(ctx context.Context, opts metav1.
 func (c *openShiftAPIServers) Patch(ctx context.Context, name string, pt types.PatchType, data []byte, opts metav1.PatchOptions, subresources ...string) (result *v1.OpenShiftAPIServer, err error) {
 	result = &v1.OpenShiftAPIServer{}
 	err = c.client.Patch(pt).
-		Resource("openshiftapiservers").
+		Resource("uccpapiservers").
 		Name(name).
 		SubResource(subresources...).
 		VersionedParams(&opts, scheme.ParameterCodec).

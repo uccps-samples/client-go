@@ -3,8 +3,8 @@
 package v1alpha1
 
 import (
-	v1alpha1 "github.com/openshift/api/servicecertsigner/v1alpha1"
-	"github.com/openshift/client-go/servicecertsigner/clientset/versioned/scheme"
+	v1alpha1 "github.com/uccps-samples/api/servicecertsigner/v1alpha1"
+	"github.com/uccps-samples/client-go/servicecertsigner/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -13,7 +13,7 @@ type ServicecertsignerV1alpha1Interface interface {
 	ServiceCertSignerOperatorConfigsGetter
 }
 
-// ServicecertsignerV1alpha1Client is used to interact with features provided by the servicecertsigner.config.openshift.io group.
+// ServicecertsignerV1alpha1Client is used to interact with features provided by the servicecertsigner.config.uccp.io group.
 type ServicecertsignerV1alpha1Client struct {
 	restClient rest.Interface
 }

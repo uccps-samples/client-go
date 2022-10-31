@@ -5,8 +5,8 @@ package v1
 import (
 	"context"
 
-	v1 "github.com/openshift/api/project/v1"
-	scheme "github.com/openshift/client-go/project/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/project/v1"
+	scheme "github.com/uccps-samples/client-go/project/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	rest "k8s.io/client-go/rest"
 )

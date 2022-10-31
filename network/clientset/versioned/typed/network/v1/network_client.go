@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/network/v1"
-	"github.com/openshift/client-go/network/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/network/v1"
+	"github.com/uccps-samples/client-go/network/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -16,7 +16,7 @@ type NetworkV1Interface interface {
 	NetNamespacesGetter
 }
 
-// NetworkV1Client is used to interact with features provided by the network.openshift.io group.
+// NetworkV1Client is used to interact with features provided by the network.uccp.io group.
 type NetworkV1Client struct {
 	restClient rest.Interface
 }

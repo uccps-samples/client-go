@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	quotav1 "github.com/openshift/api/quota/v1"
+	quotav1 "github.com/uccps-samples/api/quota/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -18,9 +18,9 @@ type FakeAppliedClusterResourceQuotas struct {
 	ns   string
 }
 
-var appliedclusterresourcequotasResource = schema.GroupVersionResource{Group: "quota.openshift.io", Version: "v1", Resource: "appliedclusterresourcequotas"}
+var appliedclusterresourcequotasResource = schema.GroupVersionResource{Group: "quota.uccp.io", Version: "v1", Resource: "appliedclusterresourcequotas"}
 
-var appliedclusterresourcequotasKind = schema.GroupVersionKind{Group: "quota.openshift.io", Version: "v1", Kind: "AppliedClusterResourceQuota"}
+var appliedclusterresourcequotasKind = schema.GroupVersionKind{Group: "quota.uccp.io", Version: "v1", Kind: "AppliedClusterResourceQuota"}
 
 // Get takes name of the appliedClusterResourceQuota, and returns the corresponding appliedClusterResourceQuota object, and an error if there is any.
 func (c *FakeAppliedClusterResourceQuotas) Get(ctx context.Context, name string, options v1.GetOptions) (result *quotav1.AppliedClusterResourceQuota, err error) {

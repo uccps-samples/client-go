@@ -3,8 +3,8 @@
 package v1
 
 import (
-	v1 "github.com/openshift/api/imageregistry/v1"
-	"github.com/openshift/client-go/imageregistry/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/imageregistry/v1"
+	"github.com/uccps-samples/client-go/imageregistry/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -14,7 +14,7 @@ type ImageregistryV1Interface interface {
 	ImagePrunersGetter
 }
 
-// ImageregistryV1Client is used to interact with features provided by the imageregistry.operator.openshift.io group.
+// ImageregistryV1Client is used to interact with features provided by the imageregistry.operator.uccp.io group.
 type ImageregistryV1Client struct {
 	restClient rest.Interface
 }

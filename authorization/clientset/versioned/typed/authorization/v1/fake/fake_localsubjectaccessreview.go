@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1 "github.com/openshift/api/authorization/v1"
+	v1 "github.com/uccps-samples/api/authorization/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -17,9 +17,9 @@ type FakeLocalSubjectAccessReviews struct {
 	ns   string
 }
 
-var localsubjectaccessreviewsResource = schema.GroupVersionResource{Group: "authorization.openshift.io", Version: "v1", Resource: "localsubjectaccessreviews"}
+var localsubjectaccessreviewsResource = schema.GroupVersionResource{Group: "authorization.uccp.io", Version: "v1", Resource: "localsubjectaccessreviews"}
 
-var localsubjectaccessreviewsKind = schema.GroupVersionKind{Group: "authorization.openshift.io", Version: "v1", Kind: "LocalSubjectAccessReview"}
+var localsubjectaccessreviewsKind = schema.GroupVersionKind{Group: "authorization.uccp.io", Version: "v1", Kind: "LocalSubjectAccessReview"}
 
 // Create takes the representation of a localSubjectAccessReview and creates it.  Returns the server's representation of the subjectAccessReviewResponse, and an error, if there is any.
 func (c *FakeLocalSubjectAccessReviews) Create(ctx context.Context, localSubjectAccessReview *v1.LocalSubjectAccessReview, opts metav1.CreateOptions) (result *v1.SubjectAccessReviewResponse, err error) {

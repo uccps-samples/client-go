@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
+	operatorv1 "github.com/uccps-samples/api/operator/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -19,9 +19,9 @@ type FakeKubeAPIServers struct {
 	Fake *FakeOperatorV1
 }
 
-var kubeapiserversResource = schema.GroupVersionResource{Group: "operator.openshift.io", Version: "v1", Resource: "kubeapiservers"}
+var kubeapiserversResource = schema.GroupVersionResource{Group: "operator.uccp.io", Version: "v1", Resource: "kubeapiservers"}
 
-var kubeapiserversKind = schema.GroupVersionKind{Group: "operator.openshift.io", Version: "v1", Kind: "KubeAPIServer"}
+var kubeapiserversKind = schema.GroupVersionKind{Group: "operator.uccp.io", Version: "v1", Kind: "KubeAPIServer"}
 
 // Get takes name of the kubeAPIServer, and returns the corresponding kubeAPIServer object, and an error if there is any.
 func (c *FakeKubeAPIServers) Get(ctx context.Context, name string, options v1.GetOptions) (result *operatorv1.KubeAPIServer, err error) {

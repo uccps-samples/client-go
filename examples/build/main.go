@@ -10,8 +10,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/tools/clientcmd"
 
-	v1 "github.com/openshift/api/build/v1"
-	buildv1 "github.com/openshift/client-go/build/clientset/versioned/typed/build/v1"
+	v1 "github.com/uccps-samples/api/build/v1"
+	buildv1 "github.com/uccps-samples/client-go/build/clientset/versioned/typed/build/v1"
 )
 
 func main() {
@@ -76,7 +76,7 @@ func start() error {
 	fmt.Printf("Found BuildConfig %s in namespace %s\n", myBuildConfig.Name, namespace)
 	buildRequest := v1.BuildRequest{}
 	buildRequest.Kind = "BuildRequest"
-	buildRequest.APIVersion = "build.openshift.io/v1"
+	buildRequest.APIVersion = "build.uccp.io/v1"
 	objectMeta := metav1.ObjectMeta{}
 	objectMeta.Name = "cakephp-ex"
 	buildRequest.ObjectMeta = objectMeta

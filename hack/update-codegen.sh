@@ -22,8 +22,8 @@ go install ./${CODEGEN_PKG}/cmd/{defaulter-gen,client-gen,lister-gen,informer-ge
 
 for group in apps authorization build config console image imageregistry network oauth project quota route samples security template user; do
   bash ${CODEGEN_PKG}/generate-groups.sh "client,lister,informer" \
-    github.com/openshift/client-go/${group} \
-    github.com/openshift/api \
+    github.com/uccps-samples/client-go/${group} \
+    github.com/uccps-samples/api \
     "${group}:v1" \
     --go-header-file ${SCRIPT_ROOT}/hack/boilerplate.txt \
     --plural-exceptions=DNS:DNSes,DNSList:DNSList,Endpoints:Endpoints,Features:Features,FeaturesList:FeaturesList,SecurityContextConstraints:SecurityContextConstraints \
@@ -32,8 +32,8 @@ done
 
 for group in servicecertsigner operatorcontrolplane; do
   bash ${CODEGEN_PKG}/generate-groups.sh "client,lister,informer" \
-    github.com/openshift/client-go/${group} \
-    github.com/openshift/api \
+    github.com/uccps-samples/client-go/${group} \
+    github.com/uccps-samples/api \
     "${group}:v1alpha1" \
     --go-header-file ${SCRIPT_ROOT}/hack/boilerplate.txt \
     --plural-exceptions=DNS:DNSes,DNSList:DNSList,Endpoints:Endpoints,Features:Features,FeaturesList:FeaturesList,SecurityContextConstraints:SecurityContextConstraints \
@@ -42,8 +42,8 @@ done
 
 for group in operator; do
   bash ${CODEGEN_PKG}/generate-groups.sh "client,lister,informer" \
-    github.com/openshift/client-go/${group} \
-    github.com/openshift/api \
+    github.com/uccps-samples/client-go/${group} \
+    github.com/uccps-samples/api \
     "${group}:v1,v1alpha1" \
     --go-header-file ${SCRIPT_ROOT}/hack/boilerplate.txt \
     --plural-exceptions=DNS:DNSes,DNSList:DNSList,Endpoints:Endpoints,Features:Features,FeaturesList:FeaturesList,SecurityContextConstraints:SecurityContextConstraints \
@@ -52,8 +52,8 @@ done
 
 for group in helm; do
   bash ${CODEGEN_PKG}/generate-groups.sh "client,lister,informer" \
-    github.com/openshift/client-go/${group} \
-    github.com/openshift/api \
+    github.com/uccps-samples/client-go/${group} \
+    github.com/uccps-samples/api \
     "${group}:v1beta1" \
     --go-header-file ${SCRIPT_ROOT}/hack/boilerplate.txt \
     --plural-exceptions=DNS:DNSes,DNSList:DNSList,Endpoints:Endpoints,Features:Features,FeaturesList:FeaturesList,SecurityContextConstraints:SecurityContextConstraints \

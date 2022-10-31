@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	v1 "github.com/openshift/api/apps/v1"
-	scheme "github.com/openshift/client-go/apps/clientset/versioned/scheme"
+	v1 "github.com/uccps-samples/api/apps/v1"
+	scheme "github.com/uccps-samples/client-go/apps/clientset/versioned/scheme"
 	v1beta1 "k8s.io/api/extensions/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"

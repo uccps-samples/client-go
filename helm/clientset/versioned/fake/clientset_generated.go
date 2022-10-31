@@ -3,9 +3,9 @@
 package fake
 
 import (
-	clientset "github.com/openshift/client-go/helm/clientset/versioned"
-	helmv1beta1 "github.com/openshift/client-go/helm/clientset/versioned/typed/helm/v1beta1"
-	fakehelmv1beta1 "github.com/openshift/client-go/helm/clientset/versioned/typed/helm/v1beta1/fake"
+	clientset "github.com/uccps-samples/client-go/helm/clientset/versioned"
+	helmv1beta1 "github.com/uccps-samples/client-go/helm/clientset/versioned/typed/helm/v1beta1"
+	fakehelmv1beta1 "github.com/uccps-samples/client-go/helm/clientset/versioned/typed/helm/v1beta1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

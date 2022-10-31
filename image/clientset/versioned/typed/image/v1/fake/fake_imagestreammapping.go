@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v1 "github.com/openshift/api/image/v1"
+	v1 "github.com/uccps-samples/api/image/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
@@ -17,9 +17,9 @@ type FakeImageStreamMappings struct {
 	ns   string
 }
 
-var imagestreammappingsResource = schema.GroupVersionResource{Group: "image.openshift.io", Version: "v1", Resource: "imagestreammappings"}
+var imagestreammappingsResource = schema.GroupVersionResource{Group: "image.uccp.io", Version: "v1", Resource: "imagestreammappings"}
 
-var imagestreammappingsKind = schema.GroupVersionKind{Group: "image.openshift.io", Version: "v1", Kind: "ImageStreamMapping"}
+var imagestreammappingsKind = schema.GroupVersionKind{Group: "image.uccp.io", Version: "v1", Kind: "ImageStreamMapping"}
 
 // Create takes the representation of a imageStreamMapping and creates it.  Returns the server's representation of the status, and an error, if there is any.
 func (c *FakeImageStreamMappings) Create(ctx context.Context, imageStreamMapping *v1.ImageStreamMapping, opts metav1.CreateOptions) (result *metav1.Status, err error) {

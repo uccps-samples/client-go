@@ -5,7 +5,7 @@ package versioned
 import (
 	"fmt"
 
-	controlplanev1alpha1 "github.com/openshift/client-go/operatorcontrolplane/clientset/versioned/typed/operatorcontrolplane/v1alpha1"
+	controlplanev1alpha1 "github.com/uccps-samples/client-go/operatorcontrolplane/clientset/versioned/typed/operatorcontrolplane/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

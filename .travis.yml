@@ -7,6 +7,6 @@ script:
   - make verify build build-examples
 
 notifications:
-  irc: "chat.freenode.net#openshift-dev"
+  irc: "chat.freenode.net#uccp-dev"
 
 sudo: false
